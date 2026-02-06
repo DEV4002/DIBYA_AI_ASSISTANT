@@ -6,5 +6,11 @@ sentence-transformers
 
 torch
 flask
+gunicornflask
 gunicorn
+
+nltk
 requests
+
+
+

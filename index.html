@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIBYA_ASSISTANT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- ROBOT -->
+    <div class="robot-area" onclick="robotHi()">
+        <div class="robot">
+            <div class="head">
+                <div class="eye left"></div>
+                <div class="eye right"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="body"></div>
+            <div class="hand left-hand"></div>
+            <div class="hand right-hand"></div>
+        </div>
+        <p class="name">* ! * DIBYA * ! *</p>
+    </div>
+
+    <!-- CHAT -->
+    <div id="chat" class="chat-box"></div>
+
+    <input id="userInput" placeholder="ask question to Dibya" />
+    
+    <div class="buttons">
+        <button onclick="sendMessage()">ASK</button>
+        <button onclick="clearChat()" class="clear">Clear Chat</button>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

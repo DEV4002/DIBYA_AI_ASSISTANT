@@ -1,0 +1,135 @@
+body {
+    background-color :rgba(139, 168, 31, 0.842);
+    font-family: Arial;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.app {
+    width: 360px;
+    background: #1c2c53;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.robot-area {
+    cursor: pointer;
+}
+
+.robot {
+    position: relative;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* ROBOT PARTS */
+.head {
+    width: 100px;
+    height: 100px;
+    background: #5fbd12;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+}
+
+.eye {
+    width: 14px;
+    height: 14px;
+    background: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+}
+
+.eye.left { left: 30px; }
+.eye.right { right: 30px; }
+
+.mouth {
+    width: 35px;
+    height: 8px;
+    background: #006aff;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.body {
+    width: 80px;
+    height: 70px;
+    background: #93b41a;
+    margin: 5px auto;
+    border-radius: 15px;
+}
+
+.hand {
+    width: 14px;
+    height: 50px;
+    background: #00f35d;
+    position: absolute;
+    top: 110px;
+}
+
+.left-hand { left: 110px; }
+.right-hand { right:110px; }
+
+.wave {
+    animation: wave 0.3s infinite alternate;
+}
+
+@keyframes wave {
+    from { transform: rotate(100deg); }
+    to { transform: rotate(2000deg); }
+}
+
+/* CHAT */
+.chat-box {
+    background: #020617;
+    height: 140px;
+    margin: 10px 0;
+    padding: 10px;
+    overflow-y: auto;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+button {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.clear {
+    background: #7f1d1d;
+    color: white;
+}
+
+.name {
+    color: #38bdf8;
+    font-weight: bold;
+}

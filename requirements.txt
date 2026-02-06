@@ -3,4 +3,8 @@ numpy
 scikit-learn
 joblib
 sentence-transformers
+
 torch
+flask
+gunicorn
+requests

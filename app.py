@@ -6,6 +6,17 @@ import joblib
 import pandas as pd
 import random
 from preprocess import clean_text
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello, Render!"
+
+if __name__ == "__main__":
+    app.run()
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "model/assistant_model.pkl")
@@ -49,3 +60,4 @@ def respond():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
